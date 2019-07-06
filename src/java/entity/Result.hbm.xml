@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 29, 2019 7:52:01 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entity.Result" table="result" catalog="university" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="stuId" type="java.lang.Integer">
+            <column name="stu_id" />
+        </property>
+        <property name="sub1" type="java.lang.Integer">
+            <column name="sub_1" />
+        </property>
+        <property name="sub2" type="java.lang.Integer">
+            <column name="sub_2" />
+        </property>
+        <property name="sub3" type="java.lang.Integer">
+            <column name="sub_3" />
+        </property>
+        <property name="sub4" type="java.lang.Integer">
+            <column name="sub_4" />
+        </property>
+        <property name="totalGpa" type="java.lang.Double">
+            <column name="total_gpa" precision="22" scale="0" />
+        </property>
+        <property name="grade" type="string">
+            <column name="grade" length="45" />
+        </property>
+        <property name="semester" type="string">
+            <column name="semester" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

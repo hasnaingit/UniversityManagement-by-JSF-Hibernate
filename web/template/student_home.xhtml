@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <ui:composition template="/template/common.xhtml">
+        <ui:define name="content">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <p:panel header="Student Information" style="width: 800px; background-color:whitesmoke;">
+
+                <h:panelGrid id="grid" columns="4" cellpadding="5" style="background-color:white; border-color: aqua;">
+
+
+                    <p:outputLabel value="Id:" style="font-weight:bold"/>
+                    <p:inputText value="#{showStudent.st.id}" required="true" />
+
+
+
+
+                    <p:outputLabel  value="Name:" style="font-weight:bold"/>
+                    <p:inputText  value="#{showStudent.st.name}"/>
+
+
+                    <p:outputLabel value="Department:" style="font-weight:bold"/>
+                    <p:selectOneMenu  value="#{showStudent.st.department}" style="width:200px">
+                        <f:selectItem itemLabel="--Select-one---" itemValue="" />
+                        <f:selectItem itemLabel="English" itemValue="" />
+                        <f:selectItem itemLabel="Law" itemValue="Xbox One" />
+                        <f:selectItem itemLabel="CSE" itemValue="PS4" />
+                    </p:selectOneMenu>
+
+
+                    <p:outputLabel  value="Phone:" style="font-weight:bold"/>
+                    <p:inputText  value="#{showStudent.st.phone}"/>
+
+
+                    <p:outputLabel  value="Gender:" style="font-weight:bold"/>
+                    <p:selectOneRadio id="console" value="#{showStudent.st.gender}">
+                        <f:selectItem itemLabel="Male" itemValue="male" />
+                        <f:selectItem itemLabel="Female" itemValue="female" />
+
+                    </p:selectOneRadio>
+
+
+
+                    <h:outputLabel  value="Batch:" style="font-weight:bold"/>
+                    <p:inputText  value="#{showStudent.st.batch}"/>
+
+
+
+                </h:panelGrid>
+
+                <p:commandButton value="Add Student"  style="margin-right:10px" action="#{showStudent.register()}"/>
+                <p:commandButton value="Update Student"  style="margin-right:10px"/>
+                <p:commandButton value="Remove Student"  style="margin-right:10px"/>
+                <p:commandButton value="Show Student"  style="margin-right:10px"/>
+                <h:commandButton value="show Student" action="#{showStudent.display}" />
+            </p:panel>
+        </h:form>
+   
+        
+    </h:body>
+            </ui:define>
+        </ui:composition>
+</html>
+

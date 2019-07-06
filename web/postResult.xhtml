@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+     <ui:composition template="/template/common.xhtml">
+         <ui:define name="content">
+    <h:body>
+       
+         <h:form>
+            <p:growl showDetail="true" id="msg" />
+            <p:panelGrid columns="3">           
+                <p:outputLabel value="student id:"/>
+                <p:inputText value="#{p_result.r.stuId}" label="name" required="true" requiredMessage="Username can't be empty" /><br></br><br></br>
+               
+                <p:outputLabel value="subject 1: "/>
+                <p:inputText value="#{p_result.r.sub1}" label="phone" required="true" requiredMessage="Username can't be empty" /><br></br><br></br> 
+                
+                <p:outputLabel  value="subject 2"/>
+                <p:inputText value="#{p_result.r.sub2}" label="gender" required="true" requiredMessage="Username can't be empty" /><br></br><br></br>
+               
+                <p:outputLabel value="subject 3"/>
+                <p:inputText value="#{p_result.r.sub3}" label="user_id" required="true" requiredMessage="Username can't be empty" /><br></br><br></br>
+                
+                 
+                <p:outputLabel value="subject 4"/>
+                <p:inputText value="#{p_result.r.sub4}" label="code" required="true" requiredMessage="Username can't be empty" /><br></br><br></br>
+                
+                
+                <p:outputLabel value="semester"/>
+                <p:inputText value="#{p_result.r.semester}" label="code" required="true" requiredMessage="Username can't be empty" /><br></br><br></br>
+                 
+                <p:outputLabel value="Grade :"/>
+                <p:inputText value="#{p_result.r.grade}" label="address" required="true" requiredMessage="Username can't be empty" /><br></br><br></br>
+                
+                
+                <p:outputLabel value="total GPA"/>
+                               <p:inputText value="#{p_result.r.totalGpa}" label="address" required="true" requiredMessage="Username can't be empty" /><br></br><br></br>
+                 
+              
+                               <p:commandButton action="#{p_result.post_Result()}" value="Set Result" update="msg"/>
+<!--                <p:button value="Register Now" outcome="/register.xhtml" ></p:button>-->
+
+          
+       </p:panelGrid>
+        </h:form> 
+        
+        
+        
+        
+        
+    </h:body>
+         
+         </ui:define>
+     </ui:composition>
+</html>
+

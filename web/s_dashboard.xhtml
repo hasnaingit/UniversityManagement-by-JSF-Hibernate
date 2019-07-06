@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+   <ui:composition template="/template/common.xhtml">
+       <ui:define name="content">
+    <h:body>
+        <h2> Welcome  !  you are in the Student section</h2>
+         <h:form>
+             <p:commandLink action="#{stu_log.logout()}">Logout</p:commandLink>
+        </h:form>
+        <div  style="position: absolute;">
+         <div style="width: 300px; height: 100px; border: 3px solid black; position: relative;background-color: #00cccc; float: left; opacity:0.5; ">
+        <h:form> 
+<!--        <h:form> <h:commandLink value="student section" action="./student_home.xhtml"></h:commandLink></h:form>-->
+         <p:commandButton action="student.xhtml?faces-redirect=true" value="Student Status" />
+         </h:form> 
+        </div>
+         <div style="width: 300px; height: 100px; border: 3px solid black; position: relative;background-color:white; float: left; opacity:0.7;">
+        <h:form> 
+<!--        <h:form> <h:commandLink value="student section" action="./student_home.xhtml"></h:commandLink></h:form>-->
+         <p:commandButton action="searchResult.xhtml?faces-redirect=true" value="Result" />
+         </h:form> 
+        </div>
+        
+        </div>
+        <div>
+        <h:graphicImage value="/resources/sss.jpg"></h:graphicImage>
+        </div>
+    </h:body>
+       </ui:define>
+   </ui:composition>
+</html>
+

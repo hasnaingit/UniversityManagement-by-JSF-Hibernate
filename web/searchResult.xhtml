@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <ui:composition template="/template/common.xhtml">
+        <ui:define name="content">
+    <h:body>
+       
+         <h:form>
+        <h:panelGrid columns="3" style="margin-bottom:10px" cellpadding="1">
+            <p:panel header="Enter student id" style="margin-bottom:10px;">
+                <p:inputText value="#{showResult.r.stuId}"/>
+            </p:panel>
+
+                
+                 <p:panel header="Enter student semester" style="margin-bottom:10px;">
+                     <p:inputText value="#{showResult.r.semester}"/>
+            </p:panel>
+                
+                
+
+        </h:panelGrid>
+             <p:commandButton action="#{showResult.searchResult()}" value="Search" />
+
+        </h:form>
+        
+          <p:panel header="See Result" style="margin-bottom:10px;">
+            <h:panelGrid columns="5" cellpadding="5">
+                <p:dataTable var="user" value="#{showResult.rlist}" >
+                    
+                    
+                     <p:column headerText="Id">
+                         <h:outputText value="#{user.stuId}" />
+                    </p:column>
+                    
+                
+                    <p:column headerText="subject 1">
+                        <h:outputText value="#{user.sub1}" />
+                    </p:column>
+                    <p:column headerText="subject 2">
+                        <h:outputText value="#{user.sub2}" />
+                    </p:column>
+                    <p:column headerText="subject 3 ">
+                        <h:outputText value="#{user.sub3}" />
+                    </p:column>
+                    
+                     <p:column headerText="subject 4">
+                         <h:outputText value="#{user.sub4}" />
+                    </p:column>
+                    
+                     <p:column headerText="Grade ">
+                         <h:outputText value="#{user.grade}" />
+                    </p:column>
+                     <p:column headerText="Total GPA">
+                         <h:outputText value="#{user.totalGpa}" />
+                    </p:column>
+                    
+                    
+                    </p:dataTable>
+            </h:panelGrid>       
+        </p:panel>
+        
+
+        
+    </h:body>
+        
+        </ui:define>
+        </ui:composition>
+</html>
+

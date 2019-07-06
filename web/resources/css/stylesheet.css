@@ -1,0 +1,107 @@
+#header-container{
+    position: relative;
+    background-color: lightblue;
+    color: black;
+   border:  2px solid aqua;
+   text-align: center;
+    height: 100px;
+}
+#menus{
+   position: relative;
+    background-color: coral;
+    color: white;
+    padding: 1px; 
+    margin: 0px 0px 5px 0px;
+    height: 40px;
+    border: 2px solid blue;
+}
+#sidebar{
+    position: relative;
+    background-color: cornsilk;
+    color: black;
+    padding: 1px;
+    margin: 0px 0px 5px 0px;
+    height: 600px;
+    float: left;
+    width: 200px;
+    border: 1px solid black;
+}
+#content{
+    position: relative;
+   background-color: lightgray;
+    color: black;
+    padding: 1px;
+    margin: 0px 0px 5px 0px;
+    height: 600px;
+    float: right;
+    width: 1055px;
+    text-align: center;
+    border: 2px solid black;
+}
+#content-container{
+    position: relative;
+    background-color: gray;
+    height: 610px;
+   
+}
+#footer-container{
+    position: relative;
+    background-color: lightsteelblue;
+    color: black;
+    padding: 1px;
+    margin: 0px 0px 5px 0px;
+    height: 65px;
+    width: 100%;
+   text-align: center;
+}
+
+
+
+
+#page{
+   background-color: gray; 
+    width: 95%;
+   height: 845px;
+  
+  margin-left:30px;
+  border: 2px solid white;
+   
+    
+}
+
+body{
+    background-color: black;
+}
+
+
+
+
+
+
+ .topnav{
+                overflow: hidden;
+                background-color: gainsboro;
+            }
+            .topnav a{
+                position: relative;
+                float: left;
+                color: black;
+                text-align: center;
+                padding: 15px 25px;
+                text-decoration: none;
+                font-size: 20px;
+                font-weight: bold;
+              
+            }
+            .topnav a:hover{
+                background-color: #00cccc;
+                color: blue;
+            }
+            
+            .indexbg{
+                
+                background-image: url("/resources/ss.jpg") ;
+            }
+            
+             .img{
+                 background-image:url(#{request.contextPath}/resources/css/aiub.jpg);} 

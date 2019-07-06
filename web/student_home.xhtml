@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+   <ui:composition template="/template/common.xhtml">
+       <ui:define name="content">
+    <h:body>
+        <h:form>
+            <p:panel header="Student Information" style="width: 800px; background-color:whitesmoke;">      
+                <h:panelGrid id="grid" columns="4" cellpadding="5" style="background-color:white;">
+
+                    <p:outputLabel value="Id:" style="font-weight:bold"/>
+                    <p:inputText value="#{studentBean.st.id}" required="true" />
+
+                    <p:outputLabel  value="Name:" style="font-weight:bold"/>
+                    <p:inputText  value="#{studentBean.st.name}"/>
+
+                    <p:outputLabel value="Department:" style="font-weight:bold"/>
+                    <p:selectOneMenu  value="#{studentBean.st.department}" style="width:200px">
+                        <f:selectItem itemLabel="English" itemValue="" />
+                        <f:selectItem itemLabel="Law" itemValue="Xbox One" />
+                        <f:selectItem itemLabel="CSE" itemValue="PS4" />
+                    </p:selectOneMenu>
+                    
+                    <p:outputLabel  value="Phone:" style="font-weight:bold"/>
+                    <p:inputText  value="#{studentBean.st.phone}"/>
+
+                    <p:outputLabel  value="Gender:" style="font-weight:bold"/>
+                    <p:selectOneRadio id="console" value="#{studentBean.st.gender}">
+                        <f:selectItem itemLabel="Male" itemValue="male" />
+                        <f:selectItem itemLabel="Female" itemValue="female" />          
+                    </p:selectOneRadio>
+
+                    <h:outputLabel  value="Batch:" style="font-weight:bold"/>
+                    <p:inputText  value="#{studentBean.st.batch}"/>
+
+<!--                    <h:outputLabel  value="Date" style="font-weight:bold"/>         
+                    <h:inputText id = "dateInput" value = "#{userData.date}">            
+                        <f:convertDateTime pattern = "dd-mm-yyyy" />
+                    </h:inputText>   -->
+                    
+                </h:panelGrid>
+                <p:commandButton value="Add Student" action="#{studentBean.save()}"  style="margin-right:10px"/>
+                <p:commandButton value="Update Student" action="#{studentBean.update()}"  style="margin-right:10px"/>
+                <p:commandButton value="Remove Student" action="#{studentBean.delete()}" style="margin-right:10px"/>
+                <p:commandButton value="Search Student" action="#{studentBean.find()}" style="margin-right:10px"/>
+                <p:commandButton value="Show Student"  style="margin-right:10px"/>       
+            </p:panel>
+        </h:form>
+        <br></br><br></br>
+        <p:outputPanel id="books">
+            <p:dataTable value="#{collectorView.books}" var="book" >
+
+                <p:column headerText="Id" style="background-color: cyan;">
+                    <h:outputText value="#{book.title}" />
+                </p:column>
+
+                <p:column headerText="Name">
+                    <h:outputText value="#{book.title}" />
+                </p:column>
+
+                <p:column headerText="Department">
+                    <h:outputText value="#{book.title}" />
+                </p:column>
+
+                <p:column headerText="Phone">
+                    <h:outputText value="#{book.title}" />
+                </p:column>
+
+                <p:column headerText="Gender">
+                    <h:outputText value="#{book.title}" />
+                </p:column>
+
+                <p:column headerText="Batch">
+                    <h:outputText value="#{book.title}" />
+                </p:column>
+
+                <p:column headerText="Date">
+                    <h:outputText value="#{book.title}" />
+                </p:column>
+
+                <p:column headerText="Action">
+                    <p:commandLink value="Update"> </p:commandLink>
+                    <p:commandLink value="Remove"> </p:commandLink>
+                </p:column>           
+
+            </p:dataTable>
+        </p:outputPanel>
+
+    </h:body>
+       
+       </ui:define>
+   </ui:composition>
+</html>
+

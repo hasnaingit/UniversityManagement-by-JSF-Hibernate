@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <ui:composition template="/template/common.xhtml">
+        
+        <ui:define name="content">
+            <div style="float: left; height: 600px;">
+                <h:form style="width: 500px; height: 600px;">
+                   <p:panel id="panel" header="Login to Apply" >
+ 
+        <p:focus context="panel"/>
+ 
+        <p:messages />
+ 
+        <h:panelGrid columns="3" style="width: 300px;">
+            <p:outputLabel for="username" value="Username" />
+            <p:inputText id="username" value="#{focusView.username}" required="true" label="Firstname">
+                <f:validateLength minimum="2" />
+            </p:inputText>
+            <p:message for="username" />
+ 
+            <p:outputLabel for="a" value="Email" />
+            <p:inputText id="a" value="#{focusView.email}" required="true" label="Surname"/>
+            <p:message for="a" />
+        </h:panelGrid>
+ 
+        <p:commandButton id="l" value="Save" update="@parent" action="#{focusView.save}" />
+        
+       
+        
+        
+    </p:panel>
+</h:form> 
+                
+                
+            </div>
+            
+            <div style="float: left;">
+                <h:form style="width: 500px;">
+    <p:panel id="panel" header="Register for Apply">
+ 
+        <p:focus context="panel"/>
+ 
+        <p:messages />
+ 
+        <h:panelGrid columns="3">
+            <p:outputLabel for="b" value="Name" />
+            <p:inputText id="b" value="#{focusView.username}" required="true" label="b">
+                <f:validateLength minimum="2" />
+            </p:inputText>
+            <p:message for="b" />
+            
+            
+            
+            
+            <p:outputLabel for="c" value="Email" />
+            <p:inputText id="c" value="#{focusView.username}" required="true" label="Firstname">
+                <f:validateLength minimum="2" />
+            </p:inputText>
+            <p:message for="c" /> 
+            
+            
+            
+             <p:outputLabel for="d" value="phone" />
+            <p:inputText id="d" value="#{focusView.username}" required="true" label="Firstname">
+                <f:validateLength minimum="2" />
+            </p:inputText>
+            <p:message for="d" />
+            
+            
+            
+            
+            
+            
+             <p:outputLabel for="f" value="Department" />
+            <p:inputText id="f" value="#{focusView.username}" required="true" label="Firstname">
+                <f:validateLength minimum="2" />
+            </p:inputText>
+            <p:message for="f" />
+            
+            
+            
+            
+            
+            
+            
+            
+            
+             <p:outputLabel for="g" value="Semester" />
+            <p:inputText id="g" value="#{focusView.username}" required="true" label="Firstname">
+                <f:validateLength minimum="2" />
+            </p:inputText>
+            <p:message for="g" />
+            
+            
+            
+             <p:outputLabel for="h" value="SSC RESULT" />
+            <p:inputText id="h" value="#{focusView.username}" required="true" label="Firstname">
+                <f:validateLength minimum="2" />
+            </p:inputText>
+            <p:message for="h" />
+            
+            
+            
+            
+            
+             <p:outputLabel for="i" value="HSC Result" />
+            <p:inputText id="i" value="#{focusView.username}" required="true" label="Firstname">
+                <f:validateLength minimum="2" />
+            </p:inputText>
+            <p:message for="i" />
+            
+
+            
+ 
+            <p:outputLabel for="j" value="gender" />
+            <p:inputText id="j" value="#{focusView.email}" required="true" label="Surname"/>
+            <p:message for="j" />
+        </h:panelGrid>
+ 
+        <p:commandButton id="submitButton" value="Save" update="@parent" action="#{focusView.save}" />
+    </p:panel>
+</h:form> 
+                
+            </div>
+            
+            
+        </ui:define>
+        
+    </ui:composition>
+</html>
+

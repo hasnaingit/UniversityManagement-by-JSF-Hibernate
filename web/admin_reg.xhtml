@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+     <ui:composition template="/template/common.xhtml">
+         <ui:define name="content">
+    <h:body>
+       <h:form>
+            <p:growl showDetail="true" id="msg" />
+            <p:panelGrid columns="3">
+<!--            <p:messages id="msg" closable="true" autoUpdate="true"></p:messages>-->
+           
+               
+                <p:outputLabel value="User Name:"/>
+                <p:inputText value="#{loginMb.ad.name}" label="name" required="true" requiredMessage="Username can't be empty" /><br></br><br></br>
+               
+                <p:outputLabel value="Phone: "/>
+                <p:inputText value="#{loginMb.ad.phone}" label="phone" required="true" requiredMessage="Username can't be empty" /><br></br><br></br> 
+                
+                 <p:outputLabel>Gender </p:outputLabel>
+                 <p:inputText value="#{loginMb.ad.gender}" label="gender" required="true" requiredMessage="Username can't be empty" /><br></br><br></br>
+               
+                 <p:outputLabel>Email</p:outputLabel>
+                 <p:inputText value="#{loginMb.ad.userId}" label="user_id" required="true" requiredMessage="Username can't be empty" /><br></br><br></br>
+                
+                 
+                  <p:outputLabel>secret code </p:outputLabel>
+                  <p:inputText value="#{loginMb.ad.code}" label="code" required="true" requiredMessage="Username can't be empty" /><br></br><br></br>
+                 
+                  <p:outputLabel>Address </p:outputLabel>
+                  <p:inputText value="#{loginMb.ad.address}" label="address" required="true" requiredMessage="Username can't be empty" /><br></br><br></br>
+                 
+                <p:outputLabel>Password </p:outputLabel>
+                <p:password value="#{loginMb.ad.pass}" label="Password" required="true" requiredMessage="Password can't be empty" /><br></br><br></br>
+                <p:commandButton action="#{loginMb.register()}" value="Register" update="msg"/>
+<!--                <p:button value="Register Now" outcome="/register.xhtml" ></p:button>-->
+
+          
+       </p:panelGrid>
+        </h:form> 
+        
+             <h:form>
+                 <p:panel style="width: 370px;">
+             <h:commandButton action="adminLogin" value="Go to Login" ></h:commandButton>
+        </p:panel>
+             </h:form>
+      
+    </h:body>
+         </ui:define>
+     </ui:composition>
+</html>
+
